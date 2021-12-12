@@ -2,7 +2,7 @@
 title: "UnityのXRで使いたいリアルタイム技術・サービスの整理"
 emoji: "🎉"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["XR","リアルタイム","マルチプレイ"]
+topics: ["XR","Unity","リアルタイム","マルチプレイ"]
 published: true
 ---
 # 概要
@@ -140,7 +140,7 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
     - WebTransport
     - 上3つに関して、とても分かりやすい記事です。[WebSocketの次の技術！？WebTransportについての解説とチュートリアル - Qiita](https://qiita.com/yuki_uchida/items/d9de148bb2ee418563cf)
 
-## シリアラライズ
+## シリアライズ
 送りたいデータを人が読める形(json等)ではなく、バイナリでおくることで、通信効率を高めることができる。
 
 - [Protocol Buffers  |  Google Developers](https://developers.google.com/protocol-buffers)
