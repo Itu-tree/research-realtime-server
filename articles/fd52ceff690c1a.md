@@ -92,17 +92,36 @@ Unityでマルチプレイアプリを作りたいなとなったときに、色
     - [Oculus開発者センター](https://developer.oculus.com/)
         - [プラットフォームソリューション: ネイティブ | Oculus開発者](https://developer.oculus.com/documentation/native/ps-platform-intro/)
         - [マルチプレイヤー機能の概要: Unity | Oculus開発者](https://developer.oculus.com/documentation/unity/ps-multiplayer-overview)
+    - [モノビットエンジンクラウド](https://web.cloud.monobitengine.com/top)
+
+
+### Unity用ミドルウェア、ネットワークろぽろじーで分けてもいいの
+通信エンジンといわれるものや、
+Unity専用！クライアントプログラムだけでマルチプレイを簡単に実装できる通信ミドルウェアです。独立したソフトウェアとプロトコルを使ってやり取りするソフトうぇえあ
+- ミドルウェア
+    - [Unity - NetCode](https://unity.com/ja/products/netcode)
+            - [Netcode for GameObjectsを使ってみよう - Unityステーション - YouTube](https://www.youtube.com/watch?v=GRUtGLL8iMQ)
+    - [Monobit Unity Networking 2.0 (MUN) - モノビットエンジン公式サイト](http://www.monobitengine.com/mun/)
+    - [VR VoiceChat with MUN - モノビットエンジン公式サイト](http://www.monobitengine.com/vrvc/)
     - [PUN2 | Photon Engine](https://www.photonengine.com/ja-JP/PUN)
         - [Realtime | Photon Engine](https://www.photonengine.com/ja-JP/Realtime)はPUNとことなり、Unityから独立している。
+    - [Fusion | Photon Engine](https://www.photonengine.com/ja-JP/Fusion)
+        - PUNに置き換わるものとして開発された
+        - [Fusionイントロダクション | Photon Engine](https://doc.photonengine.com/ja-jp/fusion/current/getting-started/fusion-intro)
+    - [vis2k/Mirror: #1 Open Source Unity Networking Library](https://github.com/vis2k/Mirror)
+        - OSSなのでコードが読める
+    - [Firebase Realtime Database  |  Firebase Documentation](https://firebase.google.com/docs/database?authuser=0)
+        - NoSQLなのでもしかして、XR向けで位置同期できるのか？
+
+### 通信用ライブラリ
+リアルタイム通信エンジンに革命を起こす
+高速かつ高性能な通信ライブラリです。
 
 
-- ミドルウェア
-    - 
+- 
+アプリに組み込んで利用するプログラム
 
-- 通信用ライブラリ
-
-
-- 通信規格(インターフェース)
+### 通信規格(インターフェース)
  - WebSocket
  - Quick
  - WebTransport
@@ -124,6 +143,10 @@ Unityでマルチプレイアプリを作りたいなとなったときに、色
 - [PUN2 | Photon Engine](https://www.photonengine.com/ja-JP/PUN)
 - [Netcode for GameObjectsを使ってみよう - Unityステーション - YouTube](https://www.youtube.com/watch?v=GRUtGLL8iMQ)
 - [WebRTC Gateway | ドキュメント | SkyWay(アプリやWebサービスに、ビデオ・音声通話をかんたんに導入・実装できるSDK)](https://webrtc.ecl.ntt.com/documents/webrtc-gateway.html#%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9)
+- [Unity プロジェクトに Firebase を追加する  |  Firebase Documentation](https://firebase.google.com/docs/unity/setup?authuser=0)
+- [Firebase Realtime Database  |  Firebase Documentation](https://firebase.google.com/docs/database?authuser=0)
+    - XRの位置同期につかえるのか気になる
+
 # 個人で実装するには
 
 タイトル
