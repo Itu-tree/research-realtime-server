@@ -94,9 +94,7 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
                 - WebRTCのDataChannelの利用：[WebRTCのDataChannelを使ってUnityでリアルタイム通信するための仕組みを作る](https://zenn.dev/5ena/articles/184f208f7a1d03e1d876)
                 - [Noble Connect | Unity Asset Store](https://assetstore.unity.com/packages/tools/network/noble-connect-140535)の利用：[2019年における個人開発あるいは小規模開発のUnityリアルタイムネットワークの技術選定 - izm_11's blog](https://izm-11.hatenablog.com/entry/2019/05/03/204813)
 - Dedicated Server的な役割をする
-    - [Firebase Realtime Database | Firebase Documentation](https://firebase.google.com/docs/database?authuser=0)
-        - RealTimeDatabaseとあるのでXR向けで位置同期できるのか気になる
-        - Pub/Subモデル
+    - ？
 ## リアルタイム通信用ライブラリ
 トランスポート層のTCPやUDPを扱いやすくするライブラリやフレームワークを並べた。
 
