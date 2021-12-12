@@ -15,9 +15,9 @@ UnityのXRで使いたいオンラインマルチプレイゲーム等の「マ�
 個人のメモ的な側面が大きいです。
 
 同じような事をされている先人の方々がおられるので、おすすめ記事とともに最初に紹介させて頂きます。
+- [Unity リアルタイムネットワークメモ - フレームシンセシス](https://framesynthesis.jp/tech/unity/network/)
 - [Unityのゲーム向けクライアント・サーバ・ネットワーク関連覚書 - Qiita](https://qiita.com/s_ryuuki/items/3663cda16cdfa5f14ad7)
 - [今、Unityでネットワークマルチプレイ作るのに何を使えばいいのか – soy-software](https://soysoftware.sakura.ne.jp/archives/1686)
-- [Unity リアルタイムネットワークメモ - フレームシンセシス](https://framesynthesis.jp/tech/unity/network/)
 - [VR/ARで使いたいUnity対応マルチプレイゲーム用BaaSを比較する | by Takashi Miwa | Kadinche Engineering | Medium](https://medium.com/kadinche-engineering/unity%E5%AF%BE%E5%BF%9C%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AC%E3%82%A4%E7%94%A8baas-1c5d1861c335)
 
 
@@ -89,12 +89,15 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
     - 自前リレーサーバーが必要になる場合がある
         - [vis2k/Mirror: #1 Open Source Unity Networking Library](https://github.com/vis2k/Mirror)
             - オープンソースなのでコードを読んで勉強できる
-            - ローカルネットワークならリレーサーバは必要ない
+            - LAN内ならリレーサーバは必要ない
             - Transport層をカスタマイズできる
                 - WebRTCのDataChannelの利用：[WebRTCのDataChannelを使ってUnityでリアルタイム通信するための仕組みを作る](https://zenn.dev/5ena/articles/184f208f7a1d03e1d876)
                 - [Noble Connect | Unity Asset Store](https://assetstore.unity.com/packages/tools/network/noble-connect-140535)の利用：[2019年における個人開発あるいは小規模開発のUnityリアルタイムネットワークの技術選定 - izm_11's blog](https://izm-11.hatenablog.com/entry/2019/05/03/204813)
 - Dedicated Server的な役割をする
-    - ？
+    - 自前で書くことが多い？
+    - HeadLessUnityサーバー
+      - [vis2k/Mirror: #1 Open Source Unity Networking Library](https://github.com/vis2k/Mirror)
+        - NAT越えが必要になる
 ## リアルタイム通信用ライブラリ
 トランスポート層のTCPやUDPを扱いやすくするライブラリやフレームワークを並べた。
 
@@ -104,6 +107,8 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
         - Mirror向けのLiteNetLib:[MichalPetryka/LiteNetLib4Mirror: LiteNetLib based transport for Mirror](https://github.com/MichalPetryka/LiteNetLib4Mirror)
         - .NET用のRUDPを扱うライブラリ
         - NAT越えはどうやって実現するのか？
+    - [Noble Connect | ネットワーク | Unity Asset Store](https://assetstore.unity.com/packages/tools/network/noble-connect-140535)
+        - Mirror向けでNAT越え用のリレーサーバーを提供
 - Dedicated Server方式で実装する場合に利用
     - [sta/websocket-sharp: A C# implementation of the WebSocket protocol client and server](https://github.com/sta/websocket-sharp)
         - UnityでWebSocket Protocolを扱えるようにしたUnityAsset
@@ -157,13 +162,19 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
 ## 難易度高そう
 ### ListenServer型
 - [Mirror](https://github.com/vis2k/Mirror) + [LiteNetLib4Mirror](https://github.com/MichalPetryka/LiteNetLib4Mirror)
+    - LAN内で使う場合
 
 ### DedicatedServer型
-サーバーは土管の役割をすることが多い
-- WebSocket + protobuf
-- MajicOnion + MessagePack
-- gRPC + protobuf
-- [リアルタイムサーバー 〜Erlang/OTPで作るPubSubサーバー〜](https://www.slideshare.net/yugoshimizu/erlangotppubsub-63215899)
+- HeadLessUnityサーバー
+    - [Mirror](https://github.com/vis2k/Mirror) + [LiteNetLib4Mirror](https://github.com/MichalPetryka/LiteNetLib4Mirror)
+        - NAT越えの問題あり
+    - [Mirror](https://github.com/vis2k/Mirror) + [Noble Connect | ネットワーク | Unity Asset Store](https://assetstore.unity.com/packages/tools/network/noble-connect-140535)
+        - リレーとNAT越えが可能
+- 手作り土管サーバー
+    - WebSocket + protobuf
+    - MajicOnion + MessagePack
+    - gRPC + protobuf
+    - [リアルタイムサーバー 〜Erlang/OTPで作るPubSubサーバー〜](https://www.slideshare.net/yugoshimizu/erlangotppubsub-63215899)
 
 ## 難易度分からないけど気になる
 - [WebRTC Gateway | ドキュメント | SkyWay(アプリやWebサービスに、ビデオ・音声通話をかんたんに導入・実装できるSDK)](https://webrtc.ecl.ntt.com/documents/webrtc-gateway.html#%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9)
