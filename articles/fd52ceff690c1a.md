@@ -124,14 +124,14 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
 
 - [WebSocket - Wikipedia](https://ja.wikipedia.org/wiki/WebSocket)
     - TCP上で双方向通信を可能にしたHTTPと互換性のあるプロトコル。443番ポートと80番ポート上で動作する
-- [MQ Telemetry Transport - Wikipedia](https://ja.wikipedia.org/wiki/MQ_Telemetry_Transport)
+- [MQTT(MQ Telemetry Transport) - Wikipedia](https://ja.wikipedia.org/wiki/MQ_Telemetry_Transport)
     - TCP/IPによるPub/Sub型データ配信モデルのプロトコルでIoT機器向けで使われることがある。
     - [MQTT プロトコルの概要](https://docs.kii.com/ja/guides/thingifsdk/non_trait/mqtt/protocol_overview/)
 - [HTTP/2 - Wikipedia](https://ja.wikipedia.org/wiki/HTTP/2)
-- [Transmission Control Protocol - Wikipedia](https://ja.wikipedia.org/wiki/Transmission_Control_Protocol)
-- [Reliable User Datagram Protocol - Wikipedia](https://ja.wikipedia.org/wiki/Reliable_User_Datagram_Protocol)
+- [TCP(Transmission Control Protocol) - Wikipedia](https://ja.wikipedia.org/wiki/Transmission_Control_Protocol)
+- [RUDP(Reliable User Datagram Protocol) - Wikipedia](https://ja.wikipedia.org/wiki/Reliable_User_Datagram_Protocol)
     - [詳解 Reliable UDP - Speaker Deck](https://speakerdeck.com/fadis/xiang-jie-reliable-udp)
-- [User Datagram Protocol - Wikipedia](https://ja.wikipedia.org/wiki/User_Datagram_Protocol)
+- [UDP(User Datagram Protocol) - Wikipedia](https://ja.wikipedia.org/wiki/User_Datagram_Protocol)
     
 
 - 将来のプロコル
@@ -158,13 +158,13 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
     - [わずかな時間でオンラインアクションゲームをつくるライブコーディング〜Strix Cloud × Unity〜 - YouTube](https://www.youtube.com/watch?v=VosQHRh9diI)
 ## 難易度高そう
 ### ListenServer型
-- Mirror + LitNetLib
+- [Mirror](https://github.com/vis2k/Mirror) + [LiteNetLib4Mirror](https://github.com/MichalPetryka/LiteNetLib4Mirror)
 
 ### DedicatedServer型
 サーバーは土管の役割をすることが多い
 - WebSocket + protobuf
+- MajicOnion + MessagePack
 - gRPC + protobuf
-- MajicOnion + Messagepack
 - [リアルタイムサーバー 〜Erlang/OTPで作るPubSubサーバー〜](https://www.slideshare.net/yugoshimizu/erlangotppubsub-63215899)
 
 ## 難易度分からないけど気になる
