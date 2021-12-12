@@ -175,7 +175,7 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
 - [chkr1011/MQTTnet](https://github.com/chkr1011/MQTTnet)
 
 
-# 参考にしたリンク集のリンク
+# 参考にしたリンクのリンク集
 - [リアルタイム技術調査のスクラップ](https://zenn.dev/toutou/scraps/3749a4e062a549)
 
 # 今後の予定
