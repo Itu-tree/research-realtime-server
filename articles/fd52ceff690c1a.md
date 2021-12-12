@@ -177,5 +177,7 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
 - [リアルタイム技術調査のスクラップ](https://zenn.dev/toutou/scraps/3749a4e062a549)
 
 # 今後の予定
+- PubSubモデルについてTopicモデルではなく高頻度通信向けがあることを付け足す
+    - https://twitter.com/izm/status/1470063502299922433?s=20
 - この記事に図を追加する
 - 触ってみたい技術・サービスを使ってアレのデモをつくる
