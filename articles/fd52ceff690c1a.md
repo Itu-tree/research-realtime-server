@@ -1,5 +1,5 @@
 ---
-title: "XRで使いたいリアルタイム技術・サービスの整理"
+title: "UnityのXRで使いたいリアルタイム技術・サービスの整理"
 emoji: "🎉"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["XR","リアルタイム","マルチプレイ"]
