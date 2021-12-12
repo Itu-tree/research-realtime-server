@@ -33,7 +33,7 @@ UnityのXRで使いたいマルチオンラインアプリの「マルチ」を�
 はじめに、ネットワーク方式について紹介し、BaaS (Backend as a service)、 Unityで利用可能なな通信ミドルウェア、リアルタイム通信用ライブラリ、プロトコル、データシリアライズ毎にサービス・技術を並べています。
 
 ## ネットワーク方式
-まず、クライアント同士が繋がるためにはどんな方法がある
+まず、クライアント同士が繋がるためにはどんな方式があるか
 
 - Dedicated Server 方式
     - [Dedicated Server（専用サーバー） - フレームシンセシス](https://framesynthesis.jp/tech/unity/network/#dedicated-server%E5%B0%82%E7%94%A8%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC)
