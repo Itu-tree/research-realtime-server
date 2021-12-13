@@ -66,7 +66,7 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
 ## Unityで利用可能なな通信ミドルウェア
 ネットワークエンジン、通信エンジン、ネットワークライブラリと言われていそうなミドルウェア。Unityクライアントの実装のみで通信の完結が可能なミドルウェアを並べています。
 
-- Listen Server 方式
+- Listen Server方式
     - リレーサーバーを提供
         - [Unity - NetCode](https://unity.com/ja/products/netcode)
             - [Netcode for GameObjectsを使ってみよう - Unityステーション - YouTube](https://www.youtube.com/watch?v=GRUtGLL8iMQ)
@@ -85,19 +85,28 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
             - [WebRTCに必要な4つのサーバー(シグナリングサーバー、STUNサーバー、TURNサーバー、SFUサーバー)をAPI経由で利用できる | SkyWay](https://webrtc.ecl.ntt.com/skyway/overview.html#%EF%BC%94%E3%81%A4%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%90)
             - 使用例に「VRゲームの通信部分をWebRTCで実装する」とある
             - ホントにUnityで利用できるのか気になる
-    
-    - 自前リレーサーバーが必要になる場合がある
+        - [Normcore. Seamless multiplayer for Unity.](https://normcore.io/)
+          - [Documentation | Normcore.](https://normcore.io/documentation/)
+          - TrasnportにWebRTCが使われている
+          - ListenServer方式といっていいのか疑問
+          - [Normcore Private](https://normcore.io/normcore-private)はDedicatedServerを提供
+
+    - 自前リレーサーバーが必要になる場合
         - [vis2k/Mirror: #1 Open Source Unity Networking Library](https://github.com/vis2k/Mirror)
             - オープンソースなのでコードを読んで勉強できる
             - LAN内ならリレーサーバは必要ない
             - Transport層をカスタマイズできる
                 - WebRTCのDataChannelの利用：[WebRTCのDataChannelを使ってUnityでリアルタイム通信するための仕組みを作る](https://zenn.dev/5ena/articles/184f208f7a1d03e1d876)
                 - [Noble Connect | Unity Asset Store](https://assetstore.unity.com/packages/tools/network/noble-connect-140535)の利用：[2019年における個人開発あるいは小規模開発のUnityリアルタイムネットワークの技術選定 - izm_11's blog](https://izm-11.hatenablog.com/entry/2019/05/03/204813)
-- Dedicated Server的な役割をする
+- Dedicated Server方式
     - 自前で書くことが多い？
     - HeadLessUnityサーバー
       - [vis2k/Mirror: #1 Open Source Unity Networking Library](https://github.com/vis2k/Mirror)
         - NAT越えが必要になる
+    - [Normcore Private](https://normcore.io/normcore-private)
+      - 
+- その他
+    
 ## リアルタイム通信用ライブラリ
 トランスポート層のTCPやUDPを扱いやすくするライブラリやフレームワークを並べた。
 
@@ -121,6 +130,10 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
             - [MQTTnet を Unity で使う - Qiita](https://qiita.com/johnson65t/items/230360b4cec41e8aafa4)
             - [aws-summit-2020-fixed](https://pages.awscloud.com/rs/112-TZM-766/images/CUS-64_AWS_Summit_Online_2020_cluster-inc.pdf)
             - clusterがどのAWSのMQTTサーバーを使ってるかは分からなかった。これか？[Amazon MQ（ActiveMQ 向けマネージド型メッセージブローカーサービス）| AWS](https://aws.amazon.com/jp/amazon-mq/?amazon-mq.sort-by=item.additionalFields.postDateTime&amazon-mq.sort-order=desc)
+- その他
+  - [WebRTC](https://webrtc.org/)
+    - [WebRTCの基礎 - panda's tech note](https://ja.tech.jar.jp/webrtc/basics.html)
+
 
 ## プロトコル
 リアルタイム系の通信用ライブラリに関連するプロトコルを並べた。
