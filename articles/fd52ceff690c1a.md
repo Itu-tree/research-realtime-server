@@ -154,6 +154,7 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
 
 # 検証・小規模向けにマルチプレイゲームを作ってみたい
 ## 難易度低そう
+クライアントの実装が必要。リレーサーバーが必要な場合は、それぞれのサービスのコンソールで準備する。
 - [PUN2 | Photon Engine](https://www.photonengine.com/ja-JP/PUN)
 - [Monobit Unity Networking 2.0 (MUN) - モノビットエンジン公式サイト](http://www.monobitengine.com/mun/)
 - [Strix Unity SDK 1.4 ドキュメント](https://www.strixengine.com/doc/unity/guide/ja/index.html)
@@ -165,12 +166,13 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
     - LAN内で使う場合
 
 ### DedicatedServer型
-- HeadLessUnityサーバー
+サーバーとクライアントの両方の実装が必要になる。
+- HeadLessUnityサーバー方式
     - [Mirror](https://github.com/vis2k/Mirror) + [LiteNetLib4Mirror](https://github.com/MichalPetryka/LiteNetLib4Mirror)
         - NAT越えの問題あり
     - [Mirror](https://github.com/vis2k/Mirror) + [Noble Connect | ネットワーク | Unity Asset Store](https://assetstore.unity.com/packages/tools/network/noble-connect-140535)
         - リレーとNAT越えが可能
-- 手作り土管サーバー
+- 土管サーバー方式
     - WebSocket + protobuf
     - MajicOnion + MessagePack
     - gRPC + protobuf
