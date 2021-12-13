@@ -61,6 +61,8 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
     - [Steamworks](https://partner.steamgames.com/)
         - [マルチプレイヤー (Steamworks ドキュメント)](https://partner.steamgames.com/doc/features/multiplayer?l=japanese#gameservers)
     - [マルチプレイヤー機能の概要: Unity | Oculus開発者](https://developer.oculus.com/documentation/unity/ps-multiplayer-overview)
+    - [Epic Online Services (EOS) の概要 | Epic Online Services ドキュメンテーション](https://dev.epicgames.com/docs/services/ja/GameServices/Overview/index.html)
+      - [Epic Online Services が Unity と Unreal Engine 向けのプラグインをリリース - Epic Online Services](https://dev.epicgames.com/ja/news/epic-online-services-releases-plugins-for-unity-and-unreal-engine)
 
 
 ## Unityで利用可能なな通信ミドルウェア
