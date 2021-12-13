@@ -14,7 +14,7 @@ UnityのXRで使いたいオンラインマルチプレイゲーム等の「マ�
 動機としては、リアルタイム技術を勉強したいが、一体何から触ればいいのかが分からないので、リアルタイム、ネットワーク、マルチプレイゲームで調べ挙げて出てきた用語を整理して、個人的にさわってみたいものを探そうというものです。
 個人のメモ的な側面が大きいです。
 
-同じような事をされている先人の方々がおられるので、おすすめ記事とともに最初に紹介させて頂きます。
+同じような事をされている先人の方々がおられるので、おすすめ記事として最初に紹介させて頂きます。
 - [Unity リアルタイムネットワークメモ - フレームシンセシス](https://framesynthesis.jp/tech/unity/network/)
 - [Unityのゲーム向けクライアント・サーバ・ネットワーク関連覚書 - Qiita](https://qiita.com/s_ryuuki/items/3663cda16cdfa5f14ad7)
 - [今、Unityでネットワークマルチプレイ作るのに何を使えばいいのか – soy-software](https://soysoftware.sakura.ne.jp/archives/1686)
@@ -104,8 +104,6 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
       - [vis2k/Mirror: #1 Open Source Unity Networking Library](https://github.com/vis2k/Mirror)
         - NAT越えが必要になる
     - [Normcore Private](https://normcore.io/normcore-private)
-      - 
-- その他
     
 ## リアルタイム通信用ライブラリ
 トランスポート層のTCPやUDPを扱いやすくするライブラリやフレームワークを並べた。
