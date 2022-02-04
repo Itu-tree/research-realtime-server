@@ -92,6 +92,7 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
           - TrasnportにWebRTCが使われている
           - ListenServer方式といっていいのか疑問
           - [Normcore Private](https://normcore.io/normcore-private)はDedicatedServerを提供
+        - [Diarkis](https://diarkis.io/ja)
 
     - 自前リレーサーバーが必要になる場合
         - [vis2k/Mirror: #1 Open Source Unity Networking Library](https://github.com/vis2k/Mirror)
