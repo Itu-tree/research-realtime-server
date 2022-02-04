@@ -33,16 +33,18 @@ UnityのXRで使いたいオンラインマルチプレイゲーム等の「マ�
 はじめに、ネットワーク方式について紹介し、BaaS (Backend as a service)、 Unityで利用可能なな通信ミドルウェア、リアルタイム通信用ライブラリ、プロトコル、データシリアライズ毎にサービス・技術を並べています。
 
 ## ネットワーク方式
-まず、クライアント同士が繋がるためにはどんな方式があるか
+クライアント同士が繋がるためにはどんな方式があるか
 
 - Dedicated Server 方式
     - [Dedicated Server（専用サーバー） - フレームシンセシス](https://framesynthesis.jp/tech/unity/network/#dedicated-server%E5%B0%82%E7%94%A8%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC)
     - Pub/SubモデルやROOMモデル
         - この記事がとても分かりやすかったです。[ソーシャルゲームを支える「リアルタイムサーバー」の作り方 - ログミーTech](https://logmi.jp/tech/articles/322569)
+        - clusterのリアルタイムサーバー構成はpubsubベース (2021/12) [thara](https://thara.dev/posts/cluster-advent-calendar-day24/)
+    - スター型のネットワークが多め
  - Listen Server 方式
     - [Unity リアルタイムネットワークメモ - フレームシンセシス](https://framesynthesis.jp/tech/unity/network/#listen-server)
     - 実質的にはP2P的なクライアント同士での通信になるが、NAT越えのためのリレーサーバーを経由することが多い
-
+    - メッシュ型のネットワーク多め
 
 ## BaaS (Backend as a service)
 バックエンドのインフラや様々なアウトゲーム的な機能を提供するサービス。アクセス数に応じたサーバーのスケーリングや、認証機能、適切なマッチメイキングや、プレイヤーデータ分析機能、マルチプラットフォーム機能などを提供する。
@@ -67,9 +69,11 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
 
 ## Unityで利用可能なな通信ミドルウェア
 ネットワークエンジン、通信エンジン、ネットワークライブラリと言われていそうなミドルウェア。Unityクライアントの実装のみで通信の完結が可能なミドルウェアを並べています。
+Server方式が適切かどうかは保障できませんが、分類するとしたらこんな感じかなという印象です。
 
 - Listen Server方式
-    - リレーサーバーを提供
+    - リレーサーバーを提供 
+      - サーバー側をそんなに考えなくてもいい。
         - [Unity - NetCode](https://unity.com/ja/products/netcode)
             - [Netcode for GameObjectsを使ってみよう - Unityステーション - YouTube](https://www.youtube.com/watch?v=GRUtGLL8iMQ)
             - 旧MLAPI
