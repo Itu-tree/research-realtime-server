@@ -30,7 +30,7 @@ UnityのXRで使いたいオンラインマルチプレイゲーム等の「マ�
 - どのサービス、ミドルウェア、ライブラリを触ってみようとしたときの難易度の感覚を掴む
 
 # リアルタイム技術・サービスの整理
-はじめに、ネットワーク方式について紹介し、BaaS (Backend as a service)、 Unityで利用可能なな通信ミドルウェア、リアルタイム通信用ライブラリ、プロトコル、データシリアライズ毎にサービス・技術を並べています。
+はじめに、ネットワーク方式について紹介し、BaaS (Backend as a service)、 Unityで利用可能な通信ミドルウェア、リアルタイム通信用ライブラリ、プロトコル、データシリアライズ毎にサービス・技術を並べています。
 
 ## ネットワーク方式
 クライアント同士が繋がるためにはどんな方式があるか
@@ -67,7 +67,7 @@ BaaS (Backend as a service)と呼ばれるサービスを含む。PhotonやMonob
       - [Epic Online Services が Unity と Unreal Engine 向けのプラグインをリリース - Epic Online Services](https://dev.epicgames.com/ja/news/epic-online-services-releases-plugins-for-unity-and-unreal-engine)
 
 
-## Unityで利用可能なな通信ミドルウェア
+## Unityで利用可能な通信ミドルウェア
 ネットワークエンジン、通信エンジン、ネットワークライブラリと言われていそうなミドルウェア。Unityクライアントの実装のみで通信の完結が可能なミドルウェアを並べています。
 Server方式が適切かどうかは保障できませんが、分類するとしたらこんな感じかなという印象です。
 
