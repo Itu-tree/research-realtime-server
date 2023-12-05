@@ -3,7 +3,7 @@ title: "UnityのXRで使いたいリアルタイム技術・サービスの整�
 emoji: "🎉"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["XR","Unity","リアルタイム","マルチプレイ"]
-published: true
+published: false
 ---
 # 概要
 [tou_tou（とうとう)](https://twitter.com/__tou__tou)と申します。
