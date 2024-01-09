@@ -1,12 +1,16 @@
 ---
-title: "UnityのXRで使いたいリアルタイム技術・サービスの整理"
+title: "[2021年] UnityのXRで使いたいリアルタイム技術・サービスの整理"
 emoji: "🎉"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["XR","Unity","リアルタイム","マルチプレイ"]
-published: false
+published: true
 ---
 # 概要
-[tou_tou（とうとう)](https://twitter.com/__tou__tou)と申します。
+:::message
+2021 年時点にまとめた記事で、今後更新予定はありません。
+:::
+
+
 [Iwaken Lab.「好きな技術・コト」のカレンダー | Advent Calendar 2021 - Qiita](https://qiita.com/advent-calendar/2021/iwakenlab)の12日目の記事です。
 
 UnityのXRで使いたいオンラインマルチプレイゲーム等の「マルチ」を支える「リアルタイム」技術を整理してみました。
