@@ -1,23 +1,23 @@
 {
-  "name": "research-realtime-server",
+  "name": "zenn",
   "version": "1.0.0",
-  "description": "",
+  "description": "* [📘 How to use](https://zenn.dev/zenn/articles/zenn-cli-guide)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Itu-tree/research-realtime-server.git"
+    "url": "git+https://github.com/tou-tou/zenn.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Itu-tree/research-realtime-server/issues"
+    "url": "https://github.com/tou-tou/zenn/issues"
   },
-  "homepage": "https://github.com/Itu-tree/research-realtime-server#readme",
+  "homepage": "https://github.com/tou-tou/zenn#readme",
   "dependencies": {
-    "zenn-cli": "^0.1.150"
+    "zenn-cli": "^0.1.157"
   }
 }
