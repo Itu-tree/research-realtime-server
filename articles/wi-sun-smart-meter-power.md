@@ -40,3 +40,5 @@ published: false
 - [ローム Wi-SUN対応無線モジュール｜チップワンストップ - 電子部品・半導体の通販サイト](https://www.chip1stop.com/sp/products/rohm_wi-sun-module)
 - [電力メーター情報発信サービス（Bルートサービス）｜電力自由化への対応｜東京電力パワーグリッド株式会社](https://www.tepco.co.jp/pg/consignment/liberalization/smartmeter-broute.html)
 - https://amzn.asia/d/5WtNyQL
+- [自宅の消費電力をリアルタイムに グラフ化してみた | PPT](https://www.slideshare.net/slideshow/ss-231002401/231002401)
+- [Bルートやってみた - Skyley Official Wiki](https://www.skyley.com/wiki/?B%E3%83%AB%E3%83%BC%E3%83%88%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F#b82f0466)
