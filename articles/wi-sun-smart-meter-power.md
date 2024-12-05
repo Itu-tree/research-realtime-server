@@ -26,11 +26,94 @@ published: false
 コスパや安定性使い勝手を考えると2とした
 
 
-# 必要な機材
-- RasPi
-- 
+# 使用した機材
+- RasPi Model B3
+- BP35C2
+
+# 使用したソフトウェア
+- Python3.10
+  - [nbtk/momonga: MomongaはBルートサービスを利用してスマートメーターと通信するPythonモジュールです](https://github.com/nbtk/momonga)
+- VNC Viewer
+  - ssh でリモートデスクトップができる
 
 # 方法
+
+## BP35C2 の挙動確認
+- [ROHM BP35C2 + Bルート + Net-SNMP + Zabbixで電力監視 – Studio JamPack](https://jamfunk.jp/wp/works/svtools/pwrtb/)
+
+## VNC Viewer のセットアップ
+
+## Python3.13のインストール
+2. Python 3.13 をソースからインストール
+Debian Bullseye（Raspberry Pi OS）では、Python 3.13 が公式リポジトリで提供されていないため、ソースからコンパイルします。
+
+2.1. 必要な依存パッケージをインストール
+```bash
+sudo apt update
+sudo apt install -y wget build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev \
+                    libreadline-dev libffi-dev curl libbz2-dev
+```
+2.2. Python 3.13 のソースコードをダウンロード
+```bash
+cd /usr/src
+sudo wget https://www.python.org/ftp/python/3.13.0/Python-3.13.0.tgz
+sudo tar xzf Python-3.13.0.tgz
+cd Python-3.13.0
+```
+2.3. Python をビルドしてインストール
+```bash
+sudo ./configure --enable-optimizations
+sudo make -j$(( $(nproc) / 2 ))  # 並列ビルドを実行.すべてコアを使うとVNCが切断されるので注意
+sudo make altinstall
+```
+注意: make altinstall を使用すると、python3.10 コマンドとしてインストールされ、デフォルトの python3 を置き換えません。
+ビルドに体感1時間ぐらいかかった気がする
+
+2.4. インストール確認
+```bash
+python3.10 --version
+正常にインストールされていれば、Python 3.13 のバージョンが表示されます。
+```
+
+4. python3 のデフォルトを Python 3.13 に設定
+デフォルトの python3 を Python 3.13.0 に置き換えます。
+
+4.1. 新しいバージョンを登録
+update-alternatives を使用して Python 3.13.0 を登録します。
+
+bash
+コードをコピーする
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.13 1
+4.2. デフォルトを選択
+複数のバージョンが登録されている場合、Python 3.13.0 をデフォルトに設定します。
+
+bash
+コードをコピーする
+sudo update-alternatives --config python3
+リストが表示されますので、Python 3.13 のエントリ番号を入力してください。
+5. インストール確認
+デフォルトの Python バージョンが Python 3.13.0 になっていることを確認します。
+
+bash
+コードをコピーする
+python3 --version
+出力が以下のようになっていれば成功です。
+
+コードをコピーする
+Python 3.13.0
+
+6. pip3 の更新
+Python 3.13.0 に対応した pip をインストールまたは更新します。
+
+bash
+コードをコピーする
+python3 -m ensurepip --upgrade
+python3 -m pip install --upgrade pip
+
+
+pytnonのインストールが思ったよりめんどくさいので python3.13.0の docker image を稼働させた方が楽だったかも...
+## Pythonスクリプトの作成
+[How to Use Momonga – ビットログ](https://blog.bitmeister.jp/?p=5342)
 
 
 
